@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body{
+    background: rgb(156, 155, 156);
+}
+
+
+
+.slider{
+    margin: auto;
+    margin-top: -11%;
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+    border: 10em solid rgb(27, 22, 32);
+    /* border-radius: 3%; */
+    background-color: rgb(27, 22, 32);
+    
+
+}
+
+.memes{
+    margin: 0 auto;
+    width: 125%;
+    transition: all 1s ease;
+    /* display: flex; */
+}
+
+.img-meme{
+    margin: 0 auto;
+    display: flex;
+    transition: all 1s ease;
+}
+
+img{
+    width: 80%;
+    height: auto;
+    border-radius: 5%;
+    
+}
+
+.switch{
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: -5%;
+    margin-bottom: 2%; */
+}
+
+.round{
+    display: block;
+    padding: 0.3em;
+    /* padding: 0.1em 0.1em; */
+    height: 0.1em;
+    width: 0.1em;
+    margin: 0.3em 0.2em;
+    margin-top: 10%;
+    cursor: pointer;
+    background-color: rgb(181, 120, 255);
+    border-radius: 50%;
+    transition: all .6s ease;
+}
+
+.round:hover{
+    border: 0.1em solid rgb(185, 158, 219);
+    background: transparent;
+    transform: scale(1.1);
+    transition: all .6s ease;
+}
+
+.round:active{
+    border: 0.1em solid white;
+    background: white;
+    transition: all .1s ease;
+}
+.round:focus {
+    border: 0.1em solid white;
+    background: transparent;
+    transition: all 0.1s ease;
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+.text-meme{
+    display: flex;
+    width: 20em;
+    /* margin-top: 4%; */
+    /* overflow: hidden; */
+    gap: 25em;
+    transition: all 1s ease;
+}
+
+.text {
+    max-width: 10em;
+    color: aliceblue;
+    font-family: 'Jost';
+    font-weight: 300;
+    font-size: 1.5em;
+    text-align: left;
+    white-space: nowrap;
+    transition: all 1s ease;
+}
+
+#btn1:checked ~ .memes .img-meme {
+    transform: translateX(0);
+}
+
+#btn2:checked ~ .memes .img-meme {
+    transform: translateX(-80%);
+}
+
+#btn3:checked ~ .memes .img-meme {
+    transform: translateX(-160%);
+}
+
+#btn4:checked ~ .memes .img-meme {
+    transform: translateX(-240%);
+}
+
+#btn5:checked ~ .memes .img-meme {
+    transform: translateX(-320%);
+}
+
+#btn6:checked ~ .memes .img-meme {
+    transform: translateX(-400%);
+}
+
+
+#btn1:checked ~ .memes .text-meme {
+    transform: translateX(0);
+}
+#btn2:checked ~ .memes .text-meme {
+    transform: translateX(-32em);
+}
+#btn3:checked ~ .memes .text-meme {
+    transform: translateX(-71.9em);
+}
+#btn4:checked ~ .memes .text-meme {
+    transform: translateX(-109em);
+}
+#btn5:checked ~ .memes .text-meme {
+    transform: translateX(-149em);
+}
+#btn6:checked ~ .memes .text-meme {
+    transform: translateX(-189em);
+}
+
+.down {
+    display: flex;
+    align-items: center;
+    gap: 12%;
+    margin-top: 3%;
+}
+
+
+#btn1{
+    display: none;
+}
+
+#btn2{
+    display: none;
+}
+
+#btn3{
+    display: none;
+}
+
+#btn4{
+    display: none;
+}
+
+#btn5{
+    display: none;
+}
+
+#btn6{
+    display: none;
+}
+
+
+@media (max-width: 1000px){
+    .down{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .switch{
+        margin-left: -20%;
+    }
+
+    .text-meme{
+        margin-left: -48%;
+        gap: 27em;
+        
+    }
+
+    .text{
+        font-size: 1.1em;
+    }
+
+    #btn3:checked ~ .memes .text-meme {
+        transform: translateX(-70.5em);
+    }
+    #btn4:checked ~ .memes .text-meme {
+        transform: translateX(-106em);
+    }
+    #btn5:checked ~ .memes .text-meme {
+        transform: translateX(-144em);
+    }
+    #btn6:checked ~ .memes .text-meme {
+        transform: translateX(-182em);
+    }
+}
+
+
+@media (max-width: 900px) {
+    .slider{
+        border: 9em solid rgb(27, 22, 32); 
+    }
+
+    .text-meme{
+        margin-left: -39%;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider{
+        border: 8em solid rgb(27, 22, 32); 
+    }
+
+    .text-meme {
+        margin-left: -36%;
+    }
+}
+
+@media (max-width: 650px) {
+    .slider{
+        border: 7em solid rgb(27, 22, 32); 
+    }
+
+    .text-meme {
+        margin-left: -20%;
+    }
+}
+
+@media (max-width: 500px){
+    .slider{
+        border: 5em solid rgb(27, 22, 32);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text{
+        font-size: 1em;
+    }
+
+    .down{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .text-meme{
+        margin-left: 4%;
+    }
+
+    .switch{
+        margin-left: -20%;
+    }
+
+    #btn2:checked ~ .memes .text-meme {
+        transform: translateX(-32em);
+    }
+    #btn3:checked ~ .memes .text-meme {
+        transform: translateX(-69em);
+    }
+    #btn4:checked ~ .memes .text-meme {
+        transform: translateX(-103.8em);
+    }
+    #btn5:checked ~ .memes .text-meme {
+        transform: translateX(-140.9em);
+    }
+    #btn6:checked ~ .memes .text-meme {
+        transform: translateX(-177.8em);
+    }
+
+    .round{
+        width: 0.5em;
+        height: 0.5em;
+    }
+}
