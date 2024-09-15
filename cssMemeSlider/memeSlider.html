@@ -10,25 +10,44 @@
 </head>
 <body>
     <header></header>
-        <div class="main-container">
-            <div class="content">
-                <div class="screen-container">
-                    <img src="assets\img\mem1.jpg" alt="slide1"/>
-                    <img src="assets\img\mem3.jpg" alt="slide2"/>
-                    <img src="assets\img\mem4.jpg" alt="slide3"/>
-                    <img src="assets\img\mem6.jpg" alt="slide4"/>
+    <div class="slider">
+        <input type="radio" name="switch" id="btn1" checked>
+        <input type="radio" name="switch" id="btn2">
+        <input type="radio" name="switch" id="btn3">
+        <input type="radio" name="switch" id="btn4">
+        <input type="radio" name="switch" id="btn5">
+        <input type="radio" name="switch" id="btn6">
+
+        <div class="memes">
+            <div class="img-meme">
+                <img class="slide b1" src="assets/img/mem1.jpg" alt="mem1"/>
+                <img src="assets/img/mem2.jpg" alt="mem2"/>
+                <img src="assets/img/mem3.jpg" alt="mem3"/>
+                <img src="assets/img/mem4.jpg" alt="mem4"/>
+                <img src="assets/img/mem5.jpg" alt="mem5"/>
+                <img src="assets/img/mem6.jpg" alt="mem6"/>
+            </div>
+            <div class="down">
+                <div class="text-meme">
+                    <p class="text">И танцор...</p>
+                    <p class="text">Даже немного обидно...</p>
+                    <p class="text">Просто и понятно)</p>
+                    <p class="text">Еще помолиться забыл..)</p>
+                    <p class="text">Когда немного заработался...</p>
+                    <p class="text">Не ищите справедливости!!!</p>
                 </div>
-                <div class="buttons">
-                    <button class="button" type="button"></button>
-                    <button class="button" type="button"></button>
-                    <button class="button" type="button"></button>
-                    <button class="button" type="button"></button>
-                </div>
-                <div class="text">
-                    <p class="textMeme">TEXT</p>
+
+                <div class="switch">
+                    <label for="btn1" class="round" tabindex="0"></label>
+                    <label for="btn2" class="round" tabindex="0"></label>
+                    <label for="btn3" class="round" tabindex="0"></label>
+                    <label for="btn4" class="round" tabindex="0"></label>
+                    <label for="btn5" class="round" tabindex="0"></label>
+                    <label for="btn6" class="round" tabindex="0"></label>
                 </div>
             </div>
         </div>
+    </div>
     <footer></footer>
 </body>
 </html>
